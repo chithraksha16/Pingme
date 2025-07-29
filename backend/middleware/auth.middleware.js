@@ -21,7 +21,6 @@ export const authenticate=async(req,res,next)=>{
     next(); // Proceed to the next middleware or route handler
 }
 catch(error){
-    console.error("Authentication error:", error.message);
     res.status(500).json({message: 'Internal server error'});
 }
 }

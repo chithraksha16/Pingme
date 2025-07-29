@@ -21,8 +21,6 @@ function App() {
   },[checkAuth])
 
 
-  console.log({onlineUsers})
-  console.log({authUser})
 
   if(isCheckingAuth && !authUser) return (
     <div className='flex justify-center items-center h-screen'>

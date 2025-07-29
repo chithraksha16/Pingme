@@ -48,7 +48,6 @@ try {
     }
 }
 catch(error){
-    console.error("Error during signup,",error.message);
     res.status(500).json({message:"Internal server error"});
 }
 };
@@ -76,7 +75,6 @@ export const login= async(req,res)=>{
             });  
     }
     catch(error){
-        console.error("Error during login,",error.message);
         res.status(500).json({message:"Internal server error"});
     }
 }
@@ -88,7 +86,6 @@ export const logout = async (req, res) => {
         res.status(200).json({message:"Logout sucessfully"});
         }
         catch(error){
-            console.error("Error during logout,",error.message);
             res.status(500).json({message:"Internal server error"});
         }
 }
@@ -109,7 +106,6 @@ export const updateProfile = async (req, res) => {
         res.status(200).json({message:"Profile updated successfully",updatedUser});
     }
     catch(error){
-        console.error("Error during profile update,",error.message);
         return res.status(500).json({message:"Internal server error"});
     }
 }
@@ -119,7 +115,6 @@ export const updateProfile = async (req, res) => {
         res.status(200).json(req.user);
     }
     catch(error){
-        console.error("Error during authentication check,",error.message);
         res.status(500).json({message:"Internal server error"});
     }
 }
