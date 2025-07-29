@@ -20,7 +20,7 @@ const Login = () => {
   }
   return (
     <>
-      <div className="h-screen mt-10">
+      <div className="h-screen flex items-center justify-center mt-10">
       {/* Left Side - Form */}
       <div className="flex flex-col justify-center items-center p-6 sm:p-12">
         <div className="w-full max-w-md space-y-8 border-1 p-10 rounded-sm">
