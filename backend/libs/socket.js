@@ -9,9 +9,11 @@ const app=express();
 const server=http.createServer(app)
 
 
+
 const io= new Server(server,{
     cors:{
-        origin:["https://pingme-theta.vercel.app"]
+        origin:["https://pingme-theta.vercel.app"],
+        credentials:true
     }
 });
 
