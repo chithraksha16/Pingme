@@ -32,9 +32,9 @@ try {
 
     //save user to database 
     if(newUser){
+    await newUser.save();
     //genrate token
     await generateToken(newUser._id, res);
-    await newUser.save();
     res.status(201).json({
         message:"User created Sucessfully",
         _id:newUser._id,
